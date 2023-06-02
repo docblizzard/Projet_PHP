@@ -6,7 +6,6 @@ const interval = 4000; // duration(speed) of the slide
 
 function changeSlide(n) {
   for (var i = 0; i < imgs.length; i++) {
-    // imgs[i].style.opacity = 0;
     dots[i].className = dots[i].className.replace('active', '');
   }
 
@@ -17,13 +16,9 @@ function changeSlide(n) {
       timer = setInterval(changeSlide, interval);
       currentImg = n;
   }
-  
+
   document.querySelector('.slideshow img').src = imgs[currentImg] ;
   dots[currentImg].className += ' active';
 }
 
 var timer = setInterval(changeSlide, interval);
-
-function arrowSlide(n){
-
-}
