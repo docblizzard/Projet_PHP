@@ -16,22 +16,7 @@
 
  <!-- Slideshow product -->
   <div class="slideshow">
-    <?php
-      $images = array(
-      array("images/fn_paddle.jpeg", "Fanatec Paddle"),
-      array("images/lg_shifter.jpeg", "Logitech Shifter"),
-      array("images/tm_ring.jpeg", "Thrustmaster Quick Release"),
-      array("images/tm_shifter.jpeg", "Thrustmaster shifter")
-      );
-    
-      foreach ($images as $image) {
-        $src = $image[0];
-        $alt = $image[1];
-        echo '<div class="slide">';
-        echo '<img src="' . $src . '" alt="' . $alt . '">';
-        echo '</div>';
-      }
-    ?>
+    <img src="images/tm_shifter.jpeg" alt="Tm shifter">
     <div id="previous" onclick="changeSlide(-1)"><</div>
     <div id="next" onclick="changeSlide(1)">></div>
   </div>
