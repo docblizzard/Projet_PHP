@@ -24,11 +24,14 @@ html, body {
 }
 
 .container {
-  /* float: left; */
-  /* max-width: 800px; */
-  /* margin: 0 auto; */
-  /* padding: 20px; */
   min-height: calc(100% - 70px);
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slide{
+  display: none;
 }
 
 h1 {

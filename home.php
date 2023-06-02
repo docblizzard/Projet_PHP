@@ -15,25 +15,25 @@
     <a href="#about">About</a>
   </div>
 
-  <!-- Homepage content -->
-  <div class="container">
-  <?php
-  $images = array(
-    array("fn_paddle.jpeg", "Fanatec Paddle"),
-    array("lg_shifter.jpeg", "Logitech Shifter"),
-    array("tm_ring.jpeg", "Thrustmaster Quick Release"),
-    array("tm_shifter.jpeg", "Thrustmaster shifter")
+ <!-- Slideshow product -->
+  <div class="slideshow">
+    <?php
+      $images = array(
+      array("images/fn_paddle.jpeg", "Fanatec Paddle"),
+      array("images/lg_shifter.jpeg", "Logitech Shifter"),
+      array("images/tm_ring.jpeg", "Thrustmaster Quick Release"),
+      array("images/tm_shifter.jpeg", "Thrustmaster shifter")
 
-  ); // Array of image filenames and alt text
-
-  foreach ($images as $image) {
-    $src = $image[0];
-    $alt = $image[1];
-    echo '<div class="slide">';
-    echo '<img src="' . $src . '" alt="' . $alt . '" width="400" height="200">';
-    echo '</div>';
-  }
-  ?>
+      );
+    
+      foreach ($images as $image) {
+        $src = $image[0];
+        $alt = $image[1];
+        echo '<div class="slide">';
+        echo '<img src="' . $src . '" alt="' . $alt;
+        echo '</div>';
+      }
+    ?>
   </div>
 
   <footer class="footer">
