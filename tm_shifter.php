@@ -41,15 +41,18 @@
 
       This mod will greatly improve the feeling of your shifting, compared to the stock mushy shifters, the magnets brings a new sensation, with the added resistance, shifting will feel more crisp and snappy, it will also help with misshift.
       </p>
-      <div class="options">
-        <label for="color">Color:</label>
-        <select id="color">
-          <option value="red">Black</option>
-          <option value="blue">Grey</option>
-        </select>
-      </div>
-      <p class="price">$11</p>
-      <button class="add-to-cart-button">Add to Cart</button>
+      <form action="cart.php" method="post">
+        <div class="options">
+          <label for="color">Color:</label>
+          <select class= "custom-select" id="color">
+            <option value="red">Black</option>
+            <option value="blue">Grey</option>
+          </select>
+          <span class="select-arrow">&#9660;</span>
+        </div>
+        <p class="price">$13</p>
+        <button type="submit" class="add-to-cart-button">Add to Cart</button>
+      </form>
     </div>
   </div>
 
