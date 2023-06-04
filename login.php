@@ -14,7 +14,7 @@ if (isset($_POST['Submit'])) {
     if (mysqli_num_rows($result) > 0) {
 
         $_SESSION['Username'] = $Username;
-        $_SESSION['isLoggedIn'] = false;
+        $_SESSION['isLoggedIn'] = true;
 
         header('Location: header.php?page=slider');
         exit();
