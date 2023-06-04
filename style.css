@@ -2,8 +2,9 @@
 html, body {
   height: 100%;
   font-family: Arial, sans-serif;
-  /* /* margin: 0; */
-  overflow: hidden;
+}
+body{
+  overflow: auto;
 }
 
 h1 {
@@ -18,18 +19,22 @@ p {
 /* Navigation bar CSS */
 .navbar {
   background-color: #333;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   overflow: hidden;
 }
 
 .navbar a {
   float: right;
   color: #fff;
-  /* text-align: center; */
   padding: 14px 16px;
   text-decoration: none;
+  text-align: center;
+
 }
 
-.navbar a:hover {
+.navbar a:hover, .tm_dropdown:hover .tm_button_dropdown {
   background-color: #f1f1f1fd;
   color: #000;
 }
@@ -42,9 +47,67 @@ p {
   margin-left: auto;
 }
 
+.cart-link {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.cart-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* TM Dropdown Navigation bar CSS */
+.tm_dropdown {
+  float: left;
+  overflow: hidden;
+
+}
+
+/* Dropdown button */
+.tm_dropdown .tm_button_dropdown {
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0; 
+  padding: 14px 16px;
+  font-size: 16px;
+}
+
+.tm_dropdown:hover .tm_dropdown_content {
+  display: block;
+  color: white;
+}
+
+/* Dropdown content */
+.tm_dropdown_content{
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.tm_dropdown_content a{
+  float: none;
+  color: #fff;
+  padding: 14px 16px;  
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
 
 /* Slider and container CSS */
 .slideshow {
+  min-height: 70vh;
   width: 60%;
   height: 50%;
   position: relative;
@@ -111,6 +174,77 @@ p {
   background-color: #f8f8f8;
   padding: 20px;
   text-align: center;
-  position: sticky;
   bottom: 0;
+}
+
+/* Login and Register page CSS */
+
+.register-form{
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  background: #eee;
+
+}
+
+.register-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);  
+  background: #fff;
+  text-align: center;
+  width: 50%;
+}
+
+.register-form form h3{
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.register-form form input{
+  width: 60%;
+  padding: 14px 16px;
+  font-size: 17px;
+  margin:8px 0;
+  background: #eee;
+}
+
+.register-form form .register-button{
+  width: 35%;
+  background: #d6d6d6;
+  color: #333;
+  text-transform: capitalize;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.register-form form .register-button:hover{
+  background: #d6d6d6;
+  color: #fff;
+}
+
+.register-form form p{
+  margin-top: 10px;
+  font-size: 17px;
+  color:#333;
+}
+
+.register-form form p a{
+  color: crimson;
+}
+
+.register-form form .error-msg {
+  margin:10 px;
+  display: block;
+  background: crimson;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 17px;
 }

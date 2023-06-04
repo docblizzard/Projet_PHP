@@ -18,7 +18,9 @@ function changeSlide(n) {
   }
 
   document.querySelector('.slideshow img').src = imgs[currentImg] ;
+
   dots[currentImg].className += ' active';
 }
 
 var timer = setInterval(changeSlide, interval);
+
