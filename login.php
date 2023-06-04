@@ -19,15 +19,22 @@ if (isset($_POST['Submit'])) {
         header('Location: header.php?page=slider');
         exit();
     } else {
-        echo 'Incorrect login';
+        $error[] = 'Incorrect password or username';
     }
 }
 
 ?>
 <link rel="stylesheet" type ="text/css" href="style.css">
     <div class="register-form">
-        <form action ="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <form action ="#" method="post">
             <h3> Log in </h3>
+            <?php 
+                if (isset($error)){
+                    foreach($error as $error){
+                        echo '<span class="error-msg">'.$error.'</span>';
+                    }
+                }
+            ?>
             <input type="text" name ="Username" required placeholder="Enter your Username">
             <input type="password" name ="Password" required placeholder="Enter your Password">
             <input type="submit" name="Submit" value ="Submit" class ="register-button" >
