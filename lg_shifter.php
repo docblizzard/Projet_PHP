@@ -32,16 +32,18 @@
           To install it, simply undo the nut so that you can stretch the collar ( The collar is made strongly so that it can be stretched easily ), and slip it on the base, and then tight everything down. There is nothing to disassemble !
           Every package is carefully wrapped in protective layers and sent the day the purchase is made ( depending on the time ), and with tracking available !
       </p>
-      <div class="options">
-        <label for="color">Color:</label>
-        <select class= "custom-select" id="color">
-          <option value="red">Black</option>
-          <option value="blue">Grey</option>
-        </select>
-        <span class="select-arrow">&#9660;</span>
-      </div>
-      <p class="price">$99.99</p>
-      <button class="add-to-cart-button">Add to Cart</button>
+      <form action="cart.php" method="post">
+        <div class="options">
+          <label for="color">Color:</label>
+          <select class= "custom-select" id="color">
+            <option value="red">Black</option>
+            <option value="blue">Grey</option>
+          </select>
+          <span class="select-arrow">&#9660;</span>
+        </div>
+        <p class="price">$13</p>
+        <button type="submit" class="add-to-cart-button">Add to Cart</button>
+      </form>
     </div>
   </div>
 

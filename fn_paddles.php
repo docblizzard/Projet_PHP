@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="product-details">
-      <h1>Logitech Shifter for G27/G29/G920</h1>
+      <h1>Fanatec shifter paddles for Clubsport/Formula/Universal Hub wheels </h1>
       <p class="product-paragraph">
           This magnetic shifter mod is compatible with Logitech wheels such as G27/G29/G920/G923.<br>
           Everything that is included :<br>
@@ -43,7 +43,7 @@
         </select>
         <span class="select-arrow">&#9660;</span>
       </div>
-      <p class="price">$99.99</p>
+      <p class="price">$14</p>
       <button class="add-to-cart-button">Add to Cart</button>
     </div>
   </div>

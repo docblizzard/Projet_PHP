@@ -32,7 +32,7 @@ if (isset($_POST['submit'])){
 </head>
 <body>
     <div class="register-form">
-        <form action ="" method="post">
+        <form action ="#" method="post">
             <h3> Register </h3>
             <?php 
                 if (isset($error)){

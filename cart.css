@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.cart-container{
+    padding: 14px 16px;
+}
+h1 {
+  text-align: center;
+  margin: 20px auto;
+}
+
+table {
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.total {
+  text-align: right;
+  font-weight: bold;
+}
+
+.checkout-btn {
+  display: block;
+  height: 40px;
+  width: 15%;
+  text-align: center;
+  margin: 15px auto;
+  margin-left: 75%;
+  background-color: #337ab7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

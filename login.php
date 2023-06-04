@@ -1,15 +1,25 @@
 
 <?php
 
-session_start();
-
-if (isset($_POST['Submit'])){
+if (isset($_POST['Submit'])) {
     $Username = filter_input(INPUT_POST, 'Username', FILTER_SANITIZE_SPECIAL_CHARS);
-    $Password = $_POST['Password'];
-    $select = " SELECT * FROM clients WHERE username = '$Username' AND password ='$Password' ";
-    $result = mysqli_query($conn, $select);
-    if (mysqli_num_rows($result) > 0){
+    $Password = md5($_POST['Password']);
+
+    $select = "SELECT * FROM clients WHERE username = ? AND password = ?";
+    $stmt = mysqli_prepare($conn, $select);
+    mysqli_stmt_bind_param($stmt, 'ss', $Username, $Password);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+    if (mysqli_num_rows($result) > 0) {
+
+        $_SESSION['Username'] = $Username;
+        $_SESSION['isLoggedIn'] = false;
+
         header('Location: header.php?page=slider');
+        exit();
+    } else {
+        echo 'Incorrect login';
     }
 }
 

@@ -48,7 +48,7 @@
           <option value="blue">Grey</option>
         </select>
       </div>
-      <p class="price">$99.99</p>
+      <p class="price">$11</p>
       <button class="add-to-cart-button">Add to Cart</button>
     </div>
   </div>

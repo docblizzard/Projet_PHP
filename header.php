@@ -1,5 +1,7 @@
 <!-- Database Connection -->
-<?php include 'db/database.php'?>
+<?php include 'db/database.php';
+session_start();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -20,8 +22,17 @@
         <a href="#">Thrustmaster Quick Release</a>
       </div>
     </div>
-    <a href="header.php?page=login">Account</a>
-    <a href="#" class="cart-link">
+    <a href="header.php?page=login">
+      <?php
+        if (isset($_SESSION['Username'])) {
+            echo 'Welcome, ' . $_SESSION['Username'];
+        }
+        else {
+          echo 'Welcome, Log in';
+        }
+
+      ?></a>
+    <a href="header.php?page=cart" class="cart-link">
       <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path d="M0 0h24v24H0z" fill="none"/>
         <path d="M18 18v-1H7v1H4v-2h14v-1a1 1 0 0 0 0-2H4V9h16l1-4h-4V2h-2v2H9L8 2H6L5 6H1v2h2v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3zm-2-9V7H8v2H6V7H4l2-4h2v1h8V3h2l2 4h-2v2h-2z"/>
@@ -31,7 +42,7 @@
   <!-- Web pages sorting navigation -->
   <?php
 
-    $allowed = array('slider', 'fn_paddles', 'tm_shifter', 'lg_shifter','register', 'login','register');
+    $allowed = array('slider', 'fn_paddles', 'tm_shifter', 'lg_shifter','register', 'login', 'cart');
     $page = ( isset($_GET['page']) ) ? $_GET['page'] : 'slider';
     if ( in_array($page, $allowed) ){
         include("$page.php");
@@ -40,7 +51,6 @@
         include("404.php");
     }
     ?>
-  
   <footer class="footer">
     <p>&copy; 2023 Sim Racing Homepage. All rights reserved.</p>
   </footer>
